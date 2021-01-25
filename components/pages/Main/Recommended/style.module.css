@@ -1,0 +1,40 @@
+.recommended{
+	composes: section from global;
+	padding: 120px 0 138px;
+	background-color: var(--gray800);
+}
+.container{
+	grid-column: var(--large);
+}
+.content{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 0 0 24px;
+}
+.girlsList{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	grid-column-gap: 8px;
+	grid-row-gap: 30px;
+}
+
+@media (max-width: 900px){
+	.recommended{
+		padding: 90px 0;
+  }
+  .content{
+    margin: 16px 0 24px;
+  }
+}
+
+@media (max-width: 600px){
+	.girlsList{
+		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+	}
+	.btnWrapper{
+		margin: 60px 0 0;
+	}
+}

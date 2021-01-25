@@ -1,0 +1,36 @@
+.button {
+  background-color: var(--gray700);
+  display: flex;
+  font-size: var(--fsS);
+  font-weight: 500;
+  color: var(--white500);
+  width: 100%;
+  height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.buttonValue {
+  white-space: nowrap;
+  margin-right: 16px;
+  overflow: hidden;
+}
+
+.select {
+}
+
+.valueContainer {
+  /* background: 'linear-gradient(#fff 0%, #fff 98%, #000 100%)'; */
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid black;
+}
+
+.searchIcon {
+  color: black;
+  height: 16px;
+  width: 16px;
+}

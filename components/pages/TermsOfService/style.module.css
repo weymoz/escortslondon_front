@@ -1,0 +1,140 @@
+.termsOfService {
+  composes: section from global;
+  padding: 114px 0 0;
+}
+.container {
+  grid-column: var(--large);
+}
+.termsOfService__head {
+  composes: section from global;
+  padding-bottom: 54px;
+}
+.termsOfService__main {
+  composes: section from global;
+  background-color: var(--gray800);
+}
+.titleWrapper {
+  max-width: 600px;
+}
+.text {
+  margin: 16px 0 0;
+}
+.termsOfService__cards {
+  --count: 4;
+  padding: 82px 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: calc(var(--cellSize) * var(--count));
+}
+.card {
+  padding: 38px var(--cellSize) 30px;
+}
+.card:nth-child(1),
+.card:nth-child(3) {
+  transform: translateX(calc(-1 * var(--cellSize)));
+}
+.card:hover {
+  background-color: var(--gray700);
+}
+.card__title {
+  margin: 0 0 12px;
+  display: flex;
+}
+.card__title svg {
+  margin-right: 16px;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+}
+.card__subtitle {
+  margin: 0 0 8px;
+  font-size: var(--fsS);
+}
+.card__text {
+  opacity: 0.7;
+  font-size: var(--fsS);
+}
+.haveQuestions {
+  --count: 2;
+  margin: 90px 0;
+  background-color: var(--primary);
+  padding: 40px calc(var(--cellSize) * var(--count));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.haveQuestions__text {
+  max-width: 780px;
+}
+.haveQuestions__text p {
+  margin-top: 12px;
+  margin-right: 16px;
+  font-size: var(--fsS);
+}
+.haveQuestions__text a {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+  .termsOfService {
+    padding: 98px 0 0;
+  }
+  .termsOfService__cards {
+    --count: 2;
+    padding: 62px 0 0;
+  }
+  .haveQuestions {
+    margin: 84px 0 140px;
+  }
+}
+
+@media (max-width: 900px) {
+  .titleWrapper {
+    max-width: 450px;
+  }
+  .haveQuestions {
+    margin: 44px 0 120px;
+    flex-direction: column;
+  }
+  .haveQuestions__text {
+    max-width: 486px;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+  .haveQuestions__text h6 {
+    font-size: 24px;
+  }
+  .haveQuestions__text p {
+    margin-right: 0;
+  }
+  .card__title svg {
+    width: 28px;
+    height: 28px;
+  }
+  .card {
+    padding: 30px var(--cellSize) 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .termsOfService {
+    padding: 108px 0 0;
+  }
+  .termsOfService__cards {
+    --count: 0;
+    grid-template-columns: 1fr;
+    padding: 22px 0 0;
+  }
+  .card:nth-child(1),
+  .card:nth-child(3) {
+    transform: translateX(0);
+  }
+  .card {
+    padding: 30px calc(var(--cellSize) * 2);
+  }
+  .haveQuestions {
+    margin: 104px 0 90px;
+    flex-direction: column;
+  }
+}

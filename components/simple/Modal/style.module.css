@@ -1,0 +1,70 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100vh;
+  padding: 44px 16px;
+  background-color: var(--gray700);
+  color: var(--white);
+  outline: none;
+  box-shadow: var(--shModal);
+}
+
+.modal.dark {
+  background-color: var(--gray800);
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.38);
+}
+
+.modal.mobileCenter {
+  padding: 24px 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 32px);
+}
+
+.overlay {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#0D1117, .5);
+}
+
+.overlay.dark {
+  background-color: rgba(#0D1117, .7);
+}
+
+.close {
+  cursor: pointer;
+  color: var(--white);
+  transition: var(--tPrimary);
+  position: absolute;
+  right: 16px;
+  top: 20px;
+}
+
+.close:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 768px){
+  .modal {
+    top: 50%;
+    left: 50%;
+    max-width: 750px;
+    min-width: 750px;
+    padding: 26px 50px;
+    transform: translate(-50%, -50%);
+  }
+  .modal.mobileCenter {
+    width: auto;
+    padding: 44px 50px 16px;
+  }
+  .close {
+    top: 42px;
+    right: 46px;
+  }
+}

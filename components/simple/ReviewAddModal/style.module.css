@@ -1,0 +1,132 @@
+.root {
+  /*
+  overflow-y: auto;
+  */
+  max-height: calc(100vh - 88px);
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  border-bottom: 1px solid rgba(#ffffff, 0.1);
+}
+
+.bottom {
+  margin-top: 16px;
+  padding: 16px 0 24px;
+  display: flex;
+  flex-direction: column-reverse;
+  border-top: 1px solid rgba(#ffffff, 0.1);
+}
+
+.buttonControl > button {
+  width: 100%;
+  z-index: auto;
+  margin-bottom: 24px;
+}
+
+.bottomText {
+  font-size: var(--fsXS);
+  font-weight: 500;
+  color: var(--white);
+  opacity: 0.6;
+  margin-right: 20px;
+}
+
+.formControl {
+  margin: 20px 0;
+}
+
+.formControl label {
+  font-size: var(--fsS);
+  font-weight: 500;
+  color: rgba(#ffffff, 0.7);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.formControlInline {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+
+.formControlInline .formInlineItem:first-child {
+  grid-column: 1/-1;
+}
+
+.formControlInlinePhone .formInlineItem {
+  align-items: center;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.selectWrapper {
+  background: var(--gray700);
+}
+
+.infoText {
+  font-size: var(--fsXS);
+  font-weight: 600;
+  color: var(--white);
+  opacity: 0.5;
+  padding-top: 16px;
+}
+
+.errorMessageComment {
+  margin-top: -20px;
+}
+
+@media (min-width: 768px) {
+  .root {
+    min-width: 650px;
+    /*
+    overflow: hidden;
+    */
+    max-height: calc(100vh - 88px);
+  }
+  .bottom {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-top: 1px solid rgba(#ffffff, 0.1);
+  }
+  .buttonControl > button {
+    width: auto;
+    padding-left: 54px;
+    padding-right: 54px;
+    margin-bottom: 0;
+  }
+  .formControlInline {
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  .formControlInline .formInlineItem:first-child {
+    grid-column: auto;
+  }
+  .formControlInlinePhone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
+  .infoText {
+    padding-top: 29px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bottom {
+    margin-top: 48px;
+  }
+}

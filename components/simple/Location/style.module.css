@@ -1,0 +1,37 @@
+.mapWrapper {
+  height: 100%;
+  margin: 16px 0 0;
+  height: 276px;
+  position: relative;
+}
+
+.marker {
+  position: relative;
+  width: 46px;
+  height: 46px;
+}
+
+.marker:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--black);
+  opacity: 0.08;
+  width: 116px;
+  height: 116px;
+  border-radius: 116px;
+}
+
+.locationInfo {
+  background-color: white;
+  padding: 15px;
+  color: black;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 18px;
+}

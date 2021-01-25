@@ -1,0 +1,21 @@
+.contactWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 26px;
+  height: 46px;
+}
+.contactImage {
+  margin-right: 4px;
+  width: 40px;
+  height: 35px;
+}
+.contactLabel {
+  font-size: 10px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.contactTel {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}

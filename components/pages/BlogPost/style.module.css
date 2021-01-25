@@ -1,0 +1,73 @@
+.blogPost{
+    composes: section from global;
+}
+.nav {
+    composes: section from global;
+    padding: 102px 0 0;
+  }
+  
+  .container {
+    grid-column: var(--large);
+  }
+  
+  .topNav {
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  .topNavSide {
+    flex: 0 1 auto;
+    display: flex;
+  }
+  
+  .alignRight {
+    text-align: right;
+  }
+  
+  .navLink {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    font-size: var(--fsS);
+    font-weight: 600;
+    transition: var(--tPrimary);
+    padding-bottom: 18px;
+  }
+  
+  .navLink:hover {
+    color: var(--primary);
+  }
+  
+  .navLink svg {
+    flex: 0 0 auto;
+    display: inline-block;
+  }
+  
+  .navLink.left svg {
+    margin-right: 10px;
+  }
+  
+  .navLink.right svg {
+    margin-left: 10px;
+  }
+  
+  .navBtn {
+    display: inline-block;
+    padding: 15px 17px;
+    color: var(--white500);
+    border-bottom: 2px solid var(--white500);
+    transition: var(--tPrimary);
+  }
+  
+  .navBtn + .navBtn {
+    margin-left: 2px;
+  }
+  
+  .navBtn:hover {
+    color: var(--white);
+    border-color: var(--white);
+  }

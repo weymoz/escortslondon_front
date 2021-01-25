@@ -1,0 +1,96 @@
+.post {
+  composes: section from global;
+  padding: 48px 0 140px;
+  background-color: var(--gray800);
+}
+.container {
+  grid-column: var(--large);
+}
+.titleWrapper {
+  max-width: 750px;
+  text-align: center;
+  margin: 0 auto 48px;
+}
+.titleWrapper:before {
+  content: 'Erotic stories';
+  display: block;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 20px;
+}
+.postBackground {
+  height: 389px;
+  grid-column: 1 / -1;
+  margin: 0 0 60px;
+}
+.postBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentWrapper {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.content {
+  margin: 0 0 48px;
+}
+.contentImage {
+  margin: 60px 0;
+  height: 270px;
+}
+.contentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.title {
+  margin: 0 0 16px;
+}
+.postDate {
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+}
+.date:after {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 16px;
+  border-radius: 50%;
+  background-color: var(--white);
+  vertical-align: middle;
+  opacity: 0.4;
+}
+
+@media (max-width: 900px) {
+  .post {
+    padding: 48px 0 90px;
+  }
+  .postBackground {
+    height: 319px;
+  }
+}
+
+@media (max-width: 600px) {
+  .post {
+    padding: 48px 0 90px;
+  }
+  .postBackground {
+    height: 212px;
+  }
+  .content {
+    margin: 0 0 32px;
+  }
+  .postBackground {
+    height: 212px;
+    margin: 0 0 48px;
+  }
+  .contentImage {
+    margin: 48px 0;
+    height: 184px;
+  }
+}

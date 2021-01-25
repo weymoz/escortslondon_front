@@ -1,0 +1,146 @@
+.hero {
+  composes: section from global;
+  padding: 104px 0 54px;
+}
+.container {
+  grid-column: var(--large);
+}
+.titleWrapper {
+  margin: 0 0 16px;
+}
+.filtersWrapper {
+  width: 100%;
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(min-content, 1fr));
+  grid-row-gap: 10px;
+  grid-column-gap: 1px;
+}
+.filtersLabel {
+  grid-column: 1 / -1;
+  font-size: var(--fsS);
+  opacity: 0.7;
+}
+
+.filterBtn {
+  order: 0;
+  z-index: 0;
+}
+
+.checkboxWrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  margin: 10px 0 0;
+}
+.checkboxLabel {
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--fsS);
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.checkboxMask {
+  width: 16px;
+  height: 16px;
+  background-color: var(--gray600);
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkboxLabel input {
+  position: absolute;
+  opacity: 0;
+}
+.checkmark svg path {
+  stroke: var(--white);
+}
+.checkmark {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.checkboxLabel input:checked ~ .checkboxMask .checkmark {
+  opacity: 1;
+}
+
+.moreParameters {
+  grid-column: 1 / -1;
+}
+
+.moreParametersButton {
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: var(--fsS);
+  font-weight: 600;
+  cursor: pointer;
+}
+.moreParametersButton svg {
+  margin-right: 10px;
+}
+
+.reset {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rotate {
+  transition: transform 0.5s ease-out;
+  transform: rotate(360deg);
+}
+
+.resetIcon {
+  height: 14px;
+  display: block;
+  margin-right: 8px;
+}
+
+.resetText {
+  color: var(--gray400);
+  font-size: var(--fsS);
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    padding: 98px 0 64px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 98px 0 64px;
+  }
+  .filtersWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 122px 0 64px;
+  }
+  .titleWrapper {
+    margin: 0 0 24px;
+  }
+  .filtersWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filterBtn {
+    order: 4;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .filterBtn {
+    order: 0;
+    margin-top: 0;
+  }
+}

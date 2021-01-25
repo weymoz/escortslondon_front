@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-SemiBold.eot") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-SemiBold.woff") format("woff"),
+    url("../public/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Regular.eot") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-Regular.woff") format("woff"),
+    url("../public/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Medium.eot") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-Medium.woff") format("woff"),
+    url("../public/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/Gilroy-Bold.eot") format("embedded-opentype"),
+    url("../public/fonts/Gilroy-Bold.woff") format("woff"),
+    url("../public/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rockness";
+  src: url("../public/fonts/Rockness.ttf") format("truetype");
+  font-display: swap;
+}

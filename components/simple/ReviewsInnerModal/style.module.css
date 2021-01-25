@@ -1,0 +1,46 @@
+.root {
+  overflow: hidden;
+  height: calc(100vh - 88px);
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 14px 40px 32px 0;
+  border-bottom: 1px solid rgba(#ffffff, .1);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(100% - 140px);
+}
+
+.bottom {
+  padding: 40px 0 16px;
+  background: var(--gray700);
+}
+
+.bottom > button {
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .root {
+    max-height: 610px;
+  }
+  .top {
+    padding: 14px 40px 16px 0;
+  }
+  .bottom {
+    padding: 22px 0 16px;
+  }
+  .bottom > button {
+    width: auto;
+    padding: 13px 18px;
+  }
+}

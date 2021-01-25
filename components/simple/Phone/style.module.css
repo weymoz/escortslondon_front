@@ -1,0 +1,28 @@
+.phone {
+  flex: 1 1 auto;
+}
+
+.phone label {
+  color: var(--white);
+  opacity: .7;
+}
+
+.codeItem {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.codeItem img {
+  flex: 0 0 auto;
+  width: 16px;
+  margin-right: 5px;
+}
+
+.inline {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns: 114px 1fr;
+  grid-gap: 8px;
+}

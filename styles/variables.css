@@ -1,0 +1,69 @@
+:root{
+    --primary: #FA1D52;
+    --secondary: #101A37;
+    --blue: #427AFF;
+    --white: #ffffff;
+    --white500: #808080;
+    --black: #000000;
+    --gray800: #0D1117;
+    --gray700: #171E28;
+	--gray600: #1A232F;
+	--gray400: #E7E7E7;
+	--gray300: #F3F3F3;
+	--gray100: #FAFAFA;
+    --error: #FA1D1D;
+    --success: #4CEA6F;
+	--light: #2A323E;
+	
+	--placeholder: rgba(231,231,231, .6);
+	--borderColor: rgba(255, 255, 255, 0.3);
+}
+
+:root{
+	--cells: 48;
+	--cellSize: calc(100vw / var(--cells));
+	--large: 5 / -5;
+	--medium: 8 / -8;
+	--fsXXS: 10px;
+	--fsXS: 12px;
+	--fsS: 14px;
+	--fsM: 16px;
+	--fsL: 20px;
+	--fsXL: 28px;
+	--justify: space-between;
+}
+
+:root{
+  --tPrimary: .3s ease-in-out;
+}
+
+:root{
+  --shModal: 0px 10px 36px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  :root{
+    --fsXL: 40px;
+  }
+}
+
+@media (min-width: 1800px){
+	:root{
+		--large: 8 / -8;
+	}
+}
+@media (max-width: 1100px){
+	:root{
+		--large: 3 / -3;
+		--medium: 3 / -3;
+	}
+}
+
+/* media quries
+	desktopL - 1800px
+	desktopM - 1440px
+	tabletL - 1100px
+	tablet - 900px
+	mobileL - 767px
+	mobile - 600px
+*/

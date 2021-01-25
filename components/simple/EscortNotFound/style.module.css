@@ -1,0 +1,18 @@
+.girlNotFound{
+    composes: section from global;
+    padding: 48px 0 64px;
+    background-color: var(--gray800);
+}
+.container{
+    grid-column: var(--large);
+}
+.girlNotFound p{
+    max-width: 500px;
+    opacity: .7;
+}
+.titleWrapper{
+    margin: 0 0 16px;
+}
+.girlNotFound h3{
+    font-size: 28px;
+}

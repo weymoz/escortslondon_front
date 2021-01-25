@@ -1,0 +1,29 @@
+.input {
+  width: 100%;
+}
+.input input {
+  height: 46px;
+  width: 100%;
+  color: inherit;
+  background-color: var(--gray700);
+  padding: 0 16px;
+  font-size: var(--fsS);
+  font-weight: 500;
+}
+.input.light input {
+  background-color: var(--light);
+}
+.input input::placeholder {
+  color: var(--placeholder);
+}
+
+.fieldText {
+  display: flex;
+}
+input[type="file"].input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+

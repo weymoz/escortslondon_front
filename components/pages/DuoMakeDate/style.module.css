@@ -1,0 +1,214 @@
+.makeDate {
+  composes: section from global;
+  padding-top: 96px;
+  animation-name: show;
+  animation-duration: 1.5s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  grid-column: var(--large);
+}
+.stepsContainer {
+  display: grid;
+  grid-template-columns: minmax(300px, 390px) 1fr;
+  grid-column-gap: calc(var(--cellSize) * 2);
+}
+.steps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0 16px;
+  position: relative;
+}
+.steps:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--primary);
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+.steps:global(.step__1):after {
+  width: 33%;
+}
+.steps:global(.step__2):after {
+  width: 66%;
+}
+.steps:global(.step__3):after {
+  width: 100%;
+}
+.step {
+  display: flex;
+  align-items: center;
+  color: var(--gray400);
+}
+.stepsBody {
+  composes: section from global;
+  background-color: var(--gray800);
+  padding: 54px 0 140px;
+}
+.step__button {
+  display: flex;
+  color: var(--gray400);
+  align-items: flex-end;
+  font-weight: 600;
+  opacity: 0.6;
+}
+.step__button svg {
+  margin-right: 4px;
+}
+.step__button :global(.check_svg__check) {
+  fill: var(--gray400);
+}
+.step.active .step__button {
+  color: var(--white);
+  opacity: 1;
+}
+.step.active :global(.check_svg__check) {
+  fill: var(--white);
+}
+.step.checked :global(.check_svg__check) {
+  fill: var(--primary);
+}
+.stepsControls,
+.stepsNotification {
+  grid-column: 1 / -1;
+}
+.galleryWrapper {
+  margin-bottom: 48px;
+}
+.stepsControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--gray600);
+  padding: 16px 0;
+}
+.stepsControls p {
+  font-size: var(--fsS);
+}
+.prevStep {
+  opacity: 0.7;
+  font-weight: 600;
+}
+.prevStep svg,
+.mobilePrevStep svg {
+  margin-right: 8px;
+  margin-left: 0;
+}
+.prevStep button,
+.mobilePrevStep button {
+  padding-left: 0;
+}
+.mobilePrevStep button {
+  font-size: var(--fsS);
+}
+.nextStep {
+  display: flex;
+  align-items: center;
+}
+.nextStep .totalAmount {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 30px;
+}
+.nextStep .totalAmount__property {
+  color: var(--gray300);
+  opacity: 0.8;
+  margin-right: 12px;
+}
+.nextStep .totalAmount h5 {
+  line-height: 1;
+}
+.stepsNotification {
+  margin-bottom: 16px;
+  font-size: var(--fsXS);
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.termsLink {
+  color: var(--primary);
+}
+
+@media (max-width: 1100px) {
+  .stepsContainer {
+    grid-template-columns: 300px 1fr;
+  }
+  .stepsBody {
+    padding: 54px 0 94px;
+  }
+}
+
+@media (max-width: 900px) {
+  .stepsControls p {
+    max-width: 350px;
+  }
+  .stepsContainer {
+    grid-column-gap: calc(var(--cellSize) * 3);
+  }
+  .stepsBody {
+    padding: 54px 0 118px;
+  }
+  .nextStep .totalAmount h5 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nextStep .totalAmount h5 {
+    line-height: 1.4;
+  }
+  .stepsControls p {
+    max-width: 350px;
+    text-align: center;
+  }
+  .stepsContainer {
+    grid-template-columns: 1fr;
+  }
+  .stepsBody {
+    padding: 48px 0 74px;
+  }
+  .stepsBody.mobileStepsBody {
+    padding: 20px 0 74px;
+  }
+  .stepsControls {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .nextStep {
+    order: -1;
+    width: 100%;
+    margin: 0 0 24px;
+  }
+  .steps {
+    padding: 0 0 20px;
+  }
+  .galleryWrapper {
+    margin-bottom: 32px;
+  }
+  .nextStep {
+    display: flex;
+    flex-direction: column;
+  }
+  .nextStep .totalAmount {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 0;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}

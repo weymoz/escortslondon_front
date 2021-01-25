@@ -1,0 +1,50 @@
+@import "reset.css";
+@import "fonts.css";
+@import "variables.css";
+@import "slick.css";
+
+body {
+  font-family: "Gilroy", sans-serif;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--black);
+  font-weight: 500;
+}
+
+a,
+button {
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+.section {
+  grid-column: 1 / -1;
+  display: inherit;
+  grid-template-columns: inherit;
+}
+
+.fixed {
+  overflow: hidden;
+}
+
+/* React slick */
+.slick-arrow {
+  display: none;
+}
+
+.rc-pagination-disabled {
+  display: none;
+}
+
+*:focus {
+  outline: none;
+}

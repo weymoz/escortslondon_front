@@ -1,0 +1,67 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgba(0,0,0,.5);
+}
+.modalForm{
+    padding: 32px;
+    background-color: var(--white);
+    color: var(--black);
+    max-width: 420px;
+    width: 100%;
+}
+.modalTitle{
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+.modalDesc{
+    max-width: 340px;
+    margin: 0 0 24px;
+    color: var(--gray700)
+
+}
+.modalInput{
+    max-width: 300px;
+    margin: 0 0 8px;
+}
+.modalInput input{
+    width: 100%;
+    border: 1px solid var(--gray400);
+    height: 46px;
+    padding: 0 16px;
+    font-size: var(--fsS);
+    font-weight: 500;
+}
+.modalInput input::placeholder{
+    color: var(--gray700);
+    opacity: .6;
+}
+.resendCode{
+    color: var(--gray600);
+    opacity: .8;
+    margin: 0 0 40px;
+    font-size: var(--fsS);
+}
+.modalButtons{
+    display: flex;
+}
+.modalButtons button:nth-child(2){
+    color: #000;
+}
+.resendBtn {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+.resendBtn:hover {
+  color: var(--primary);
+}

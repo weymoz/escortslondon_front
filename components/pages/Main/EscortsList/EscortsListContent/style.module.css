@@ -1,0 +1,28 @@
+.contentWrapper {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.titleWrapper {
+  margin-bottom: 30px;
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 520px) {
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 0 24px;
+  }
+  .titleWrapper {
+    margin-bottom: auto;
+  }
+  .searchContainer {
+    width: auto;
+  }
+}
+

@@ -1,0 +1,181 @@
+/*
+:global {
+  @import '~react-image-gallery/styles/scss/image-gallery.scss';
+}
+*/
+
+.gallery
+  :global(.image-gallery-content .image-gallery-slide .image-gallery-image) {
+  min-height: 450px;
+  max-height: 450px;
+  cursor: pointer;
+}
+
+:global(div.image-gallery.fullscreen-modal).gallery {
+  background-color: var(--gray800);
+  z-index: 999;
+}
+.gallery :global(.image-gallery-slide:focus) {
+  outline: none;
+}
+
+.gallery
+  :global(.image-gallery-content.fullscreen
+    .image-gallery-slide
+    .image-gallery-image) {
+  min-height: calc(100vh - 140px);
+  padding: 64px;
+  max-height: 500px;
+  background: var(--gray800);
+  cursor: initial;
+}
+
+.gallery :global(.image-gallery-content.fullscreen .image-gallery-thumbnails) {
+  padding: 24px 0;
+}
+
+.gallery :global(.image-gallery-thumbnail) {
+  height: 100%;
+  width: auto;
+  display: block;
+  border: none;
+}
+
+.gallery :global(.image-gallery-thumbnails) {
+  padding: 13px 0 10px;
+}
+
+.gallery :global(.image-gallery-thumbnail:not(:first-child)) {
+  margin-left: 6px;
+}
+
+.gallery :global(.image-gallery-thumbnail.active),
+.gallery :global(.image-gallery-thumbnail:hover),
+.gallery :global(.image-gallery-thumbnail:focus) {
+  border: none;
+  cursor: pointer;
+}
+
+.gallery :global(.image-gallery-thumbnails-container) {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.gallery :global(.image-gallery-thumbnail .image-gallery-thumbnail-inner) {
+  height: 100%;
+}
+
+.gallery :global(.image-gallery-thumbnail .image-gallery-thumbnail-inner:after),
+.gallery :global(.image-gallery-thumbnail .image-gallery-thumbnail-inner:after),
+.gallery
+  :global(.image-gallery-thumbnail .image-gallery-thumbnail-inner:after) {
+  transition: var(--tPrimary);
+}
+
+.gallery
+  :global(.image-gallery-thumbnail.active .image-gallery-thumbnail-inner:after),
+.gallery
+  :global(.image-gallery-thumbnail:hover .image-gallery-thumbnail-inner:after),
+.gallery
+  :global(.image-gallery-thumbnail:focus .image-gallery-thumbnail-inner:after) {
+  background: transparent;
+}
+
+.gallery :global(.image-gallery-thumbnail-inner:after) {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(#000000, 0.5);
+}
+
+.gallery :global(.image-gallery-thumbnail .image-gallery-thumbnail-image) {
+  height: 100%;
+  width: auto;
+  max-width: initial;
+}
+
+.nav {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: inline-block;
+  background: rgba(#0d1117, 0.4);
+  color: var(--white);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  transition: var(--tPrimary);
+}
+
+.nav:hover {
+  background: var(--primary);
+}
+
+.nav svg {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leftNav {
+  left: 0;
+}
+
+.rightNav {
+  right: 0;
+}
+
+.fullScreenClose {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+  color: var(--white);
+  transition: var(--tPrimary);
+}
+
+.fullScreenClose:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .leftNav {
+    left: 12px;
+  }
+  .rightNav {
+    right: 12px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery :global(.image-gallery-thumbnail:not(:first-child)) {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .gallery
+    :global(.image-gallery-content .image-gallery-slide .image-gallery-image) {
+    min-height: 345px;
+    max-height: 345px;
+  }
+  .gallery :global(.image-gallery-thumbnails-container) {
+    height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery
+    :global(.image-gallery-content .image-gallery-slide .image-gallery-image) {
+    min-height: 405px;
+    max-height: 405px;
+  }
+}

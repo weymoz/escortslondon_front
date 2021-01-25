@@ -1,0 +1,11 @@
+.readMore > button {
+  color: var(--gray400);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: var(--tPrimary);
+  margin-top: 8px;
+  opacity: .54;
+}

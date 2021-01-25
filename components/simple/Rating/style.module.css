@@ -1,0 +1,31 @@
+.rating {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.ratingWrapper > span > span {
+  margin-left: 4px;
+}
+
+.ratingFull {
+  color: var(--blue);
+}
+
+.ratingEmpty {
+  color: var(--white500);
+}
+
+.ratingFull,
+.ratingEmpty {
+  display: inline-block;
+}
+
+.ratingRate {
+  font-size: var(--fsM);
+  font-weight: 600;
+  color: var(--blue);
+  margin-right: 4px;
+}

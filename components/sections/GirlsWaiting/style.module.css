@@ -1,0 +1,152 @@
+.girlsWaiting {
+  composes: section from global;
+  padding: 140px 0 160px;
+  background-color: var(--gray800);
+}
+.girlsWaitingBlack {
+  background-color: var(--black);
+}
+.container {
+  grid-column: var(--medium);
+  display: inherit;
+  grid-template-columns: minmax(min-content, 512px) minmax(300px, 344px);
+  justify-content: space-between;
+  align-items: center;
+  grid-column-gap: var(--cellSize);
+}
+.contentTitle:before {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 55px;
+  top: -26px;
+  left: -26px;
+  background-image: url(/lips.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.contentTitle {
+  margin: 0 0 46px;
+  position: relative;
+  z-index: 1;
+}
+.contentTitle p {
+  margin: 10px 0 0;
+  opacity: 0.8;
+}
+.contactWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.contactPhone {
+  display: flex;
+  align-items: center;
+  font-size: var(--fsL);
+  white-space: nowrap;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+.contactPhone span {
+  white-space: nowrap;
+}
+.contactPhone svg {
+  margin-right: 14px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.contactPhone:hover {
+  opacity: 1;
+}
+.contactPhone:hover svg {
+  color: #4e72f1;
+}
+.contactPhone + .contactPhone {
+  margin-left: 54px;
+}
+.makeDateWrapper {
+  padding: 44px var(--cellSize);
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+}
+.makeDateTitle {
+  margin: 0 0 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+.makeDateTitle p {
+  text-align: center;
+  margin: 0 15px;
+}
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 40px;
+  }
+  .makeDateTitle p {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .girlsWaiting {
+    padding: 130px 0 140px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    max-width: 450px;
+    margin: 0 auto 64px;
+    width: 100%;
+  }
+  .contentTitle {
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto 46px;
+  }
+  .makeDateWrapper {
+    width: 100%;
+    max-width: 576px;
+    margin: auto;
+  }
+  .makeDateTitle p {
+    text-align: center;
+    margin: 12px auto 0;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentTitle {
+    text-align: left;
+    margin: 0 0 32px;
+  }
+  .contactWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contactPhone:first-child {
+    margin: 0 0 20px;
+  }
+  .contentTitle:before {
+    top: -25px;
+    left: -20px;
+  }
+  .contactPhone + .contactPhone {
+    margin-left: 0;
+  }
+  .container {
+    padding-left: 0;
+  }
+}

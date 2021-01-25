@@ -1,0 +1,57 @@
+.dropzone {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--gray600);
+  background-color: rgba(23, 30, 40, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.dropzone:focus {
+  outline: none;
+}
+.dropzonePlaceholder {
+  max-width: 206px;
+  font-size: var(--fsS);
+  text-align: center;
+}
+.dropzonePlaceholder span {
+  text-decoration: underline;
+}
+.uploadIcon {
+  width: 69px;
+  height: 69px;
+  margin: 0 auto 16px;
+}
+.uploadIcon svg {
+  transition: all 0.3s ease-in-out;
+}
+.dropzone:hover :global(.upload_svg__upload-circle) {
+  fill: var(--primary);
+}
+.dropzone:hover :global(.upload_svg__upload) {
+  fill: var(--white);
+}
+
+.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.preview > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.trashIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

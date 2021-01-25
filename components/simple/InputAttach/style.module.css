@@ -1,0 +1,31 @@
+.uploadFile {
+    height: 46px;
+    width: 100%;
+    color: inherit;
+    background-color: var(--gray700);
+    padding: 0 16px;
+    font-size: var(--fsS);
+    font-weight: 500;
+    color: var(--placeholder);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .uploadPlaceholder{
+      display: flex;
+      align-items: center;
+  }
+  .uploadPlaceholder svg{
+      margin-right: 6px;
+  }
+  .uploadFile input{
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+      width: 0;
+      pointer-events: none;
+  }
+ 
+  
