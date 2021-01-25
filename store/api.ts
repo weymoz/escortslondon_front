@@ -76,7 +76,7 @@ export const filterApiCallBegan = createAction<
   return {
     payload: {
       ...payload,
-      baseURL: process.env.NEXT_PUBLIC_ESCORTS_INDEX_BASE_URL + "/api",
+      baseURL: process.env.NEXT_PUBLIC_ESCORTS_INDEX_BASE_URL_SSL + "/api",
     },
   };
 });
