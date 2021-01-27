@@ -28,7 +28,6 @@ import { useSelector } from "react-redux";
 import { Escort } from "@store/escorts";
 
 export async function getStaticPaths() {
-  console.log("**********************************************");
   const { data } = await getEscortsData(1000);
 
   const paths = data.items.map((item) => {
@@ -42,7 +41,7 @@ export async function getStaticPaths() {
   });
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -108,11 +107,10 @@ export default function ProfileBySlug({}: InferGetStaticPropsType<
   const profileData = useSelector<RootState, Escort>(selectProfileData);
 
   const router = useRouter();
-  /*
+
   if (router.isFallback) {
     return <Preloader full />;
   }
-   */
 
   const { titleMetaTag, metaDescriptionTag } = profileData;
 

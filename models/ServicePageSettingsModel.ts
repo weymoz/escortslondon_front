@@ -24,18 +24,18 @@ export default class ServicePageSettingsModel extends MainPageSettingsModel {
   }
 
   getTitle(): string {
-    return this.serviceData.title || "";
+    return this.serviceData?.title || "";
   }
 
   getDescription(): string {
-    return this.serviceData.description || "";
+    return this.serviceData?.description || "";
   }
 
   getSlug(): string {
-    return this.serviceData.slug || "";
+    return this.serviceData?.slug || "";
   }
 
   getGalleryTextLine3(): string {
-    return this.serviceData.galleryTextLine3 || "";
+    return this.serviceData?.galleryTextLine3 || "";
   }
 }

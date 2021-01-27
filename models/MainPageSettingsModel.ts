@@ -15,14 +15,8 @@ export default class MainPageSettingsModel extends Model<
 > {
   private data: MainPageSettingsFields;
   constructor(data: MainPageSettingsResponse) {
-    try {
-      super(data.includes);
-      this.data = data.items[0].fields;
-    } catch (e) {
-      throw new Error(
-        "No items returned from main page settings request to contentful api"
-      );
-    }
+    super(data?.includes);
+    this.data = data?.items[0]?.fields;
   }
 
   getSerializable(): MainPageSettings {
@@ -54,16 +48,16 @@ export default class MainPageSettingsModel extends Model<
   }
 
   getAboutUsLeftColumn(): AboutUsInfoBlock[] {
-    return this.getAboutUsColumn(this.data.aboutUsLeftColumn);
+    return this.getAboutUsColumn(this.data?.aboutUsLeftColumn);
   }
 
   getAboutUsRightColumn(): AboutUsInfoBlock[] {
-    return this.getAboutUsColumn(this.data.aboutUsRightColumn);
+    return this.getAboutUsColumn(this.data?.aboutUsRightColumn);
   }
 
   getAboutUsColumn(columnData: ContentfulLink[]): AboutUsInfoBlock[] {
     const infoBlocks = columnData?.map((item) => {
-      const foundEntry = this.getIncludedEntryById(item.sys.id);
+      const foundEntry = this.getIncludedEntryById(item?.sys?.id);
       const infoBlock = new AboutUsInfoBlockModel(foundEntry).getSerializable();
 
       if (infoBlock.iconId) {
@@ -78,88 +72,88 @@ export default class MainPageSettingsModel extends Model<
   }
 
   getTitleMetaTag(): string {
-    return this.data.titleMetaTag || "";
+    return this.data?.titleMetaTag || "";
   }
   getMetaDescriptionTag(): string {
-    return this.data.metaDescriptionTag || "";
+    return this.data?.metaDescriptionTag || "";
   }
   getMainPageHeader(): string {
-    return this.data.mainPageHeader || "";
+    return this.data?.mainPageHeader || "";
   }
 
   getSearchTitle(): string {
-    return this.data.searchTitle || "";
+    return this.data?.searchTitle || "";
   }
 
   getGalleryTextLine1() {
-    return this.data.galleryTextLine1 || "";
+    return this.data?.galleryTextLine1 || "";
   }
 
   getGalleryTextLine2() {
-    return this.data.galleryTextLine2 || "";
+    return this.data?.galleryTextLine2 || "";
   }
 
   getWelcomeTitle() {
-    return this.data.welcomeTitle || "";
+    return this.data?.welcomeTitle || "";
   }
 
   getWelcomeText() {
-    return this.data.welcomeText || "";
+    return this.data?.welcomeText || "";
   }
 
   getAboutUs(): TextBlock {
     return {
-      title: this.data.aboutUsBlock1Title || "",
-      text: this.data.aboutUsBlock1Text || "",
+      title: this.data?.aboutUsBlock1Title || "",
+      text: this.data?.aboutUsBlock1Text || "",
     };
   }
 
   getRecommendedLine1(): string {
-    return this.data.recommendedLine1 || "";
+    return this.data?.recommendedLine1 || "";
   }
 
   getRecommendedLine2(): string {
-    return this.data.recommendedLine2 || "";
+    return this.data?.recommendedLine2 || "";
   }
 
   getCallToActionTitle(): string {
-    return this.data.callToActionTitle || "";
+    return this.data?.callToActionTitle || "";
   }
 
   getCallToActionText(): string {
-    return this.data.callToActionText || "";
+    return this.data?.callToActionText || "";
   }
 
   getCallToActionButtonWrapperTitle(): string {
-    return this.data.callToActionButtonWrapperTitle || "";
+    return this.data?.callToActionButtonWrapperTitle || "";
   }
 
   getCallToActionButtonWrapperText() {
-    return this.data.callToActionButtonWrapperText || "";
+    return this.data?.callToActionButtonWrapperText || "";
   }
 
   getPhone(): string {
-    return this.data.phone || "";
+    return this.data?.phone || "";
   }
 
   getWhatsApp(): string {
-    return this.data.whatsApp || "";
+    return this.data?.whatsApp || "";
   }
 
   getCallToActionFooterSiteDescription(): string {
-    return this.data.callToActionFooterSiteDescription || "";
+    return this.data?.callToActionFooterSiteDescription || "";
   }
 
   getCallToActionFooterTitle(): string {
-    return this.data.callToActionFooterTitle || "";
+    return this.data?.callToActionFooterTitle || "";
   }
 
   getCallToActionFooterText(): string {
-    return this.data.callToActionFooterText || "";
+    return this.data?.callToActionFooterText || "";
   }
 
   getTermsFooter(): string {
-    return this.data.termsFooter || "";
+    return this.data?.termsFooter || "";
   }
 
   getTextBlockN(
@@ -168,7 +162,7 @@ export default class MainPageSettingsModel extends Model<
     blockElement: "Title" | "Text"
   ) {
     const fieldName = `${blockName}Block${blockNumber}${blockElement}`;
-    const result = this.data[fieldName] || "";
+    const result = (this.data && this.data[fieldName]) || "";
     return result;
   }
 
