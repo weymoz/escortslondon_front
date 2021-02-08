@@ -386,6 +386,8 @@ const escorts = createSlice({
 
 //Actions
 
+export const escortsFilteredReceived = escorts.actions.escortsFilteredReceived;
+
 export const escortsReceived = escorts.actions.escortsReceived;
 
 export const cleanAllFilters = escorts.actions.cleanAllFilters;

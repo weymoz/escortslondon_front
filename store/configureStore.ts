@@ -7,11 +7,15 @@ import sendmailApi from "./middleware/sendmailApi";
 import duoSendmailApi from "./middleware/duoSendmailApi";
 import uploadApi from "./middleware/upload-api";
 import reviews from "./middleware/reviews";
+import createSagaMiddleware from "redux-saga";
+import rootSaga from "./sagas";
 
 let currentStore: ReturnType<typeof configureStore>;
 
 export const initStore = (preloadedState?: RootState) => {
-  return configureStore({
+  const sagaMiddleware = createSagaMiddleware();
+
+  const store = configureStore({
     preloadedState,
     reducer,
     middleware: (getDefaultMiddleware) => {
@@ -23,10 +27,15 @@ export const initStore = (preloadedState?: RootState) => {
         .concat(sendmailApi)
         .concat(duoSendmailApi)
         .concat(reviews)
-        .concat(uploadApi);
+        .concat(uploadApi)
+        .concat(sagaMiddleware);
       return middlewares;
     },
   });
+
+  sagaMiddleware.run(rootSaga);
+
+  return store;
 };
 
 export const initializeStore = (preloadedState?: RootState, route?: string) => {
