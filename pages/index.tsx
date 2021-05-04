@@ -4,7 +4,11 @@ import Main from "@pages/Main";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { initStore } from "@store/configureStore";
 import { escortsReceived } from "@store/escorts";
-import { getEscortsData, getMainPageSettings } from "@functions/contentful-api";
+import {
+  getAreaGroups,
+  getEscortsData,
+  getMainPageSettings,
+} from "@functions/contentful-api";
 import { RootState } from "@store/reducer";
 import { MainPageSettings } from "@typedefs/app";
 import {
@@ -25,6 +29,9 @@ export const getStaticProps: GetStaticProps<{
 
     const mainPageSettingsData = await getMainPageSettings();
     dispatch(mainPageSettingsReceived(mainPageSettingsData));
+
+    const areaGroupsData = await getAreaGroups();
+    //debugger;
 
     return {
       props: {

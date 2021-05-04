@@ -14,6 +14,7 @@ import {
   DuoProfilePageSettingsResponse,
   CastingPageSettingsResponse,
   TermsPageSettingsResponse,
+  AreaGroupResponse,
 } from "@typedefs/app";
 
 export const getEscortsData = (
@@ -239,5 +240,21 @@ export const getTermsPageSettings = async (): Promise<
       content_type: "termsPageSettings",
     },
   });
+  return response.data;
+};
+
+export const getAreaGroups = async (): Promise<AreaGroupResponse> => {
+  const response = await axios
+    .request<AreaGroupResponse>({
+      method: "get",
+      baseURL: contentfulBaseURL,
+      url: "/entries",
+      params: {
+        ...contentfulBaseParams,
+        content_type: "areaGroup",
+      },
+    })
+    .catch((e) => console.log(e));
+
   return response.data;
 };

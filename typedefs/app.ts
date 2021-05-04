@@ -603,3 +603,21 @@ export interface FaqPageSettings {
 export type CardLinkType = "html" | "router";
 
 export type ProfileType = "escort" | "duo escort";
+
+//----- Locations -----
+export interface AreaGroupFields {
+  name: string;
+  id: string;
+  areas: ContentfulLink[];
+}
+
+export interface AreaFields {
+  name: string;
+  id: string;
+}
+
+export type AreaGroupResponse = ContentfulApiData<
+  AreaGroupFields,
+  AreaFields,
+  undefined
+>;
